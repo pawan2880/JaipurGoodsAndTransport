@@ -1,0 +1,103 @@
+body {
+    font-family: 'Montserrat', sans-serif !important;
+}
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    flex: 1 0 auto;
+}
+footer {
+    flex-shrink: 0;
+    background-color: #d5d5d5;
+    padding: 1.5%;
+    text-align: right;
+}
+.banner
+{
+    background-image: url("../img/main.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#homemain {
+    background-image: url("../img/banner3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.loginType .nav-link {
+    color: white;
+}
+.avtar {
+    border-radius: 50%;
+    width: 30%;
+    height: 120px;
+}
+.maincontent {
+    margin-top: 6%;
+    border: 1px solid #ccc;
+    padding: 1rem !important;
+    margin-bottom: 3rem !important;
+    border-radius: .25rem !important;
+    background-color: #fff !important;
+    box-shadow: 0 1px 4px rgba(0,0,0,.3), 0 0 40px rgba(0,0,0,.1) inset;
+}
+.display
+{
+    display: none;
+}
+.testimonial-card .card-up {
+    height: 120px;
+    overflow: hidden;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+.testimonial-card .avatar {
+    width: 120px;
+    margin-top: -60px;
+    overflow: hidden;
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+.testimonial-card .avatar img {
+    width: 100%;
+}
+.card.card-cascade.narrower .view.view-cascade {
+    margin-top: -1.25rem;
+    margin-right: 4%;
+    margin-left: 4%;
+}
+.zoom:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+h5 span {
+    width: 10%;
+    background: white;
+    height: 1px;
+    display: inline-block;
+    vertical-align: middle;
+}
+span.frist {
+    margin-right: 1em;
+}
+span.second {
+    margin-left: 1em;
+}
+
+.booking .form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #ced4da;
+    outline: 0;
+    box-shadow: none;
+}
+
+.navbar.navbar-dark .breadcrumb .nav-item .active, .navbar.navbar-dark .navbar-nav .nav-item .active {
+    background-color: rgba(255,255,255,.1);
+}

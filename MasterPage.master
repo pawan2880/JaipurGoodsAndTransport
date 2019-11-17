@@ -1,0 +1,141 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Goods & Transport</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/mdb.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/mdb.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABa9kDA6Fx4RA61FLBa8cM7PpH49Dgp_E"></script>
+    <script src="assets/js/JavaScript.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="content banner" id="homecontent" runat="server">
+        <form id="form1" runat="server">
+            <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true" EnablePageMethods="true"></asp:ScriptManager>
+           
+            <asp:Panel ID="navbar" runat="server">
+                <nav class="navbar fixed-top navbar-expand-lg navbar-dark indigo">
+                    <a class="navbar-brand" href="#">Jaipur Goods & Transport</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.aspx">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.aspx">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.aspx">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Signin.aspx">Sign In</a>
+                            </li>
+                            <%--<li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#modalForm">Admin Sign-in</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="modal" data-target="#modalLRForm">User Sign-in</a>
+                            </li>--%>
+                        </ul>
+                    </div>
+                </nav>
+            </asp:Panel>
+            <asp:Panel ID="admin" runat="server">
+                <nav class="navbar fixed-top navbar-expand-lg navbar-dark indigo">
+                    <a class="navbar-brand" href="#">Jaipur Goods & Transport</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="ManageTruck.aspx">Manage Truck</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ManageDriver.aspx">Manage Driver</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ViewBookings.aspx">View Bookings</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ViewUsers.aspx">View Users</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Logout.aspx">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </asp:Panel>
+            <asp:Panel ID="user" runat="server">
+                <nav class="navbar fixed-top navbar-expand-lg navbar-dark indigo" style="padding: 0.2rem 1rem;">
+                    <a class="navbar-brand" href="#">Jaipur Goods & Transport</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav ml-auto nav-flex-icons">
+                            <li class="nav-item" style="align-self: center;">
+                                <a class="nav-link" href="TruckDetails.aspx">Truck Details</a>
+                            </li>
+                            <li class="nav-item" style="align-self: center;">
+                                <a class="nav-link" href="Bookings.aspx">Booking</a>
+                            </li>
+                            <li class="nav-item" style="align-self: center;">
+                                <a class="nav-link" href="UserBooking.aspx">View Booking</a>
+                            </li>
+                            <li class="nav-item" style="align-self: center;">
+                                <a class="nav-link" href="Tracking.aspx">Tracking</a>
+                            </li>
+                            <li class="nav-item avatar dropdown ml-auto">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <asp:Image ID="Image1" runat="server" CssClass="rounded-circle z-depth-0" alt="avatar image" Width="50px" style="height: 50px;"/>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+                                    aria-labelledby="navbarDropdownMenuLink-55">
+                                    <a class="dropdown-item" href="UserDetails.aspx">My Details</a>
+                                    <a class="dropdown-item" href="ChangePassword.aspx">Change Password</a>
+                                    <a class="dropdown-item" href="Logout.aspx">Logout</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </asp:Panel>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </form>
+    </div>
+    <footer>
+        <asp:Label ID="Label1" runat="server" Text="Label">Jaipur Goods & Transport &copy; <label id="year"></label></asp:Label>
+    </footer>
+
+</body>
+</html>

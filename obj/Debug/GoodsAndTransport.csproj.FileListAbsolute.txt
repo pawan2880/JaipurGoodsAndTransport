@@ -1,0 +1,7 @@
+D:\DotNet\Student\GoodsAndTransport\GoodsAndTransport\bin\GoodsAndTransport.dll.config
+D:\DotNet\Student\GoodsAndTransport\GoodsAndTransport\bin\GoodsAndTransport.dll
+D:\DotNet\Student\GoodsAndTransport\GoodsAndTransport\bin\GoodsAndTransport.pdb
+D:\DotNet\Student\GoodsAndTransport\GoodsAndTransport\obj\Debug\GoodsAndTransport.csprojAssemblyReference.cache
+D:\DotNet\Student\GoodsAndTransport\GoodsAndTransport\obj\Debug\GoodsAndTransport.csproj.CoreCompileInputs.cache
+D:\DotNet\Student\GoodsAndTransport\GoodsAndTransport\obj\Debug\GoodsAndTransport.dll
+D:\DotNet\Student\GoodsAndTransport\GoodsAndTransport\obj\Debug\GoodsAndTransport.pdb
